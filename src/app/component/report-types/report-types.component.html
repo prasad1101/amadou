@@ -1,0 +1,70 @@
+
+
+<div class="container">
+<div class="jumbotron">
+
+    <h3>Report Types</h3>
+
+    <table class="table table-striped">
+        <thead class="bg-primary text-white">
+            <tr>
+                <th>
+                    Report Name
+                </th>
+                <th>
+                    Report Description
+                </th>
+            </tr>
+        </thead>
+    <tbody>
+        <ng-container *ngFor="let report of reports">
+            <tr>
+                <td>
+                    <button (click)="openReport(report.reportId)">
+                        {{tableConfig.reportId == report.reportId ? '-' : '+'}}
+                    </button> {{report.reportName}}
+                </td>
+                <td>
+                    {{report.reportDesc}}
+                </td>
+            </tr>
+
+            <tr style="background-color: cadetblue;"
+                *ngIf="tableConfig.reportId && tableConfig.reportId === report.reportId">
+                <td colspan="2"> <button (click)="openCondition(report.reportId)">
+                        Open
+                    </button>Condition</td>
+            </tr>
+            <tr style="background-color: cadetblue;" *ngIf="tableConfig.reportId && tableConfig.reportId === report.reportId">
+                <td colspan="2"> <button (click)="openMetric(report.reportId)">
+                        Open
+                    </button>Metric</td>
+            </tr>
+                        <tr style="background-color: cadetblue;" *ngIf="tableConfig.reportId && tableConfig.reportId === report.reportId">
+                            <td colspan="2"> <button (click)="openAgg(report.reportId)">
+                                    Open
+                                </button>Aggrigator</td>
+                        </tr>
+                                    <tr style="background-color: cadetblue;" *ngIf="tableConfig.reportId && tableConfig.reportId === report.reportId">
+                                        <td colspan="2"> <button (click)="openSource(report.reportId)">
+                                                Open
+                                            </button>Source</td>
+                                    </tr>
+        </ng-container>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </tbody>
+    </table>
+
+</div>
+</div>
+
+
+

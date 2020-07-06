@@ -1,0 +1,124 @@
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h2>Condition</h2>
+        <div class="row">
+            <ul>
+                <li [ngClass]="{'outstanding':outstandingAmt == true}">
+                    <input type="checkbox" [(ngModel)]="outstandingAmt"> Outstanding amount
+                </li>
+                <li [ngClass]="{'accured':accuredIntrest == true}">
+                    <input type="checkbox" [(ngModel)]="accuredIntrest"> Accured intrest receivable
+                </li>
+                <li [ngClass]="{'less':stageLoss == true}">
+                    <input type="checkbox" [(ngModel)]="stageLoss"> Stage loss 1 allowance
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Total
+                        </td>
+                        <td>
+                            Cash and balance
+                        </td>
+                        <td>
+                            Receivable under reserve repo
+                        </td>
+                        <td>
+                            Negotiable CD
+                        </td>
+                        <td>
+                            Debt securities
+                        </td>
+                        <td>
+                            NAS notice to bank 610 appendix b1
+                        </td>
+                        <td>
+                            Loan and advance
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr [ngClass]="{'outstanding':outstandingAmt == true}">
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <b>Outstanding amount</b>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                        </td>
+                    </tr>
+                    <tr [ngClass]="{'accured':accuredIntrest == true}">
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            <b>Add: Accrued intrest receivable</b>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                        </td>
+                        <td>
+                            <a href="#table">Accounts</a><br>
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                    </tr>
+                    <tr [ngClass]="{'less':stageLoss == true}">
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <b>Less: stage loss 1 allowance</b>
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                        <td>
+                            Raw_1.Col2
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
