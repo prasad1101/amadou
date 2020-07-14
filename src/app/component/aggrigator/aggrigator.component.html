@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/report-types']">Report Types</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/documentation',report]">Documentation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/condition',report]">Condition</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/metric',report]">Metric</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/aggrigator',report]">Aggrigator</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Source
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="['/source1']">Source 1</a>
+                <a class="dropdown-item" [routerLink]="['/source2']">Source 2</a>
+                <a class="dropdown-item" [routerLink]="['/source3']">Source 3</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+
+    <h3>Aggregators for {{report}}</h3>
+    <div class="jumbotron">
+<h4>Name : Sum</h4>
+
+<br>
+
+<h4>
+    Description
+</h4>
+<p>Demo description</p>
+
+<br>
+
+<h4>Code : </h4>
+
+<p>$Aggregtor=sum</p>
+</div>
+</div>

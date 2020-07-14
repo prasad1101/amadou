@@ -1,0 +1,385 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/report-types']">Report Types</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/documentation',report]">Documentation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/condition',report]">Condition</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/metric',report]">Metric</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/aggrigator',report]">Aggrigator</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Source
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="['/source1']">Source 1</a>
+                <a class="dropdown-item" [routerLink]="['/source2']">Source 2</a>
+                <a class="dropdown-item" [routerLink]="['/source3']">Source 3</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h2>Condition for {{report}}</h2>
+        <div class="row">
+            <ul>
+                <li [ngClass]="{'outstanding':outstandingAmt == true}">
+                    <input type="checkbox" [(ngModel)]="outstandingAmt"> Outstanding amount
+                </li>
+                <li [ngClass]="{'accured':accuredIntrest == true}">
+                    <input type="checkbox" [(ngModel)]="accuredIntrest"> Accured intrest receivable
+                </li>
+                <li [ngClass]="{'less':stageLoss == true}">
+                    <input type="checkbox" [(ngModel)]="stageLoss"> Stage loss 1 allowance
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>
+                            Total
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Cash and balance
+                        </td>
+                        <td>
+                            Receivable under reserve repo
+                        </td>
+                        <td>
+                            Negotiable CD
+                        </td>
+                        <td>
+                            Debt securities
+                        </td>
+                        <td>
+                            NAS notice to bank 610 appendix b1
+                        </td>
+                        <td>
+                            Loan and advance
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr [ngClass]="{'outstanding':outstandingAmt == true}">
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            <b>Outstanding amount</b>
+                        </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                        <td>
+                            Row_1.col_2<br>
+                            <a href="#table">Accounts</a><br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                            <hr>
+                            col_2<br>
+                            <a href="#table">Accounts</a><br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                            <hr>
+Row_1<br>
+<a href="#table">Loan</a><br>
+<a href="#table">Security</a>
+                        </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                        <td>
+                            Row_1.col_2<br>
+                            <a href="#table">Accounts</a><br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                            <hr>
+                            col_2<br>
+                            <a href="#table">Accounts</a><br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                            <hr>
+                            Row_1<br>
+                            <a href="#table">Loan</a><br>
+                            <a href="#table">Security</a>
+                        </td>
+                            <td>
+                                Row_1.col_2<br>
+                                <a href="#table">Accounts</a><br>
+                                <a href="#table">Loan</a><br>
+                                <a href="#table">Security</a>
+                                <hr>
+                                col_2<br>
+                                <a href="#table">Accounts</a><br>
+                                <a href="#table">Loan</a><br>
+                                <a href="#table">Security</a>
+                                <hr>
+                                Row_1<br>
+                                <a href="#table">Loan</a><br>
+                                <a href="#table">Security</a>
+                            </td>
+                                <td>
+                                    Row_1.col_2<br>
+                                    <a href="#table">Accounts</a><br>
+                                    <a href="#table">Loan</a><br>
+                                    <a href="#table">Security</a>
+                                    <hr>
+                                    col_2<br>
+                                    <a href="#table">Accounts</a><br>
+                                    <a href="#table">Loan</a><br>
+                                    <a href="#table">Security</a>
+                                    <hr>
+                                    Row_1<br>
+                                    <a href="#table">Loan</a><br>
+                                    <a href="#table">Security</a>
+                                </td>
+                    </tr>
+                    <tr [ngClass]="{'accured':accuredIntrest == true}">
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            Add : Across Intest receivable
+                        </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    </tr>
+                    <tr [ngClass]="{'less':stageLoss == true}">
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            <b>Less: stage loss 1 allowance</b>
+                        </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    <td>
+                        Row_1.col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        col_2<br>
+                        <a href="#table">Accounts</a><br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                        <hr>
+                        Row_1<br>
+                        <a href="#table">Loan</a><br>
+                        <a href="#table">Security</a>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

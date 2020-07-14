@@ -1,0 +1,36 @@
+<h1 class="text-center">Welcome to suade app</h1>
+
+
+<div class="container">
+    <div class="jumbotron text-center">
+
+        <div>
+        <div class="text-center col-md-6">
+            <div>
+                <input class="form-control p-3 m-2" [(ngModel)]="userData.userName" type="text" placeholder="User Name">
+            </div>
+            <div>
+                <input type="password" class="form-control p-3 m-2" [(ngModel)]="userData.password" placeholder="Password">
+            </div>
+            <div>
+                <!-- <input type="text" placeholder="Host Name" class="form-control p-3 m-2"> -->
+                <select aria-placeholder="select host name" [(ngModel)]="userData.hostName" class="form-control p-3 m-2">
+        
+                    <option value="host1">Host 1</option>
+                    <option value="host2">Host 2</option>
+                    <option value="host3">Host 3</option>
+                </select>
+            </div>
+        
+            <div>
+                <button (click)="login()" class="btn btn-primary form-control m-2">Login</button>
+            </div>
+        
+        
+        </div>
+
+        </div>
+
+
+    </div>
+</div>

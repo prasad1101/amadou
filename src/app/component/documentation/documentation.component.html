@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/report-types']">Report Types</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/documentation',report]">Documentation</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/condition',report]">Condition</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/metric',report]">Metric</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/aggrigator',report]">Aggrigator</a>
+        </li>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Source
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" [routerLink]="['/source1']">Source 1</a>
+                <a class="dropdown-item" [routerLink]="['/source2']">Source 2</a>
+                <a class="dropdown-item" [routerLink]="['/source3']">Source 3</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <h2>Documentation for {{report}}</h2>
+
+    <div class="jumbotron">
+        <div>
+            <p>documentation</p>
+        </div>
+    </div>
+
+    <br>
+    <h2>Features</h2>
+
+    <div class="jumbotron">
+        <div>
+            <p>features</p>
+        </div>
+    </div>
+
+    <br>
+    <h2>Format</h2>
+
+    <div class="jumbotron">
+        <div>
+            <p>format</p>
+        </div>
+    </div>
+
+    <br>
+    <h2>Table</h2>
+
+    <div class="jumbotron">
+        <div>
+            <table class="table bg-light">
+                <thead style="background-color: blue;">
+                    <tr>
+                        <td>no</td>
+                        <td>name</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Amadou</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
